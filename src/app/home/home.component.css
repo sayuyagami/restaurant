@@ -1,0 +1,17 @@
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+  }
+
+.centered:hover{
+    background-color: black;
+    color: aquamarine;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+}

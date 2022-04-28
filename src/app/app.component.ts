@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsercartlistService } from './usercartlist.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Restaurant';
+  public totalItem : number = 0;
+  constructor(private cartservice : UsercartlistService) { }
+
+  ngOnInit(): void {
+    this.cartservice.getProducts()
+    .subscribe(res=>{
+      this.totalItem = res.length;
+    })
+  }
 }
